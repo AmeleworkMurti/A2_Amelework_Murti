@@ -170,10 +170,23 @@ const MainScreen = ({ navigation }) => {
             disabled={loading} //Disable button while loading
           />
         </View>
-        
+
         {loading && (
           <View style={styles.loadingWrapper}>
             <ActivityIndicator size="large" />
             <Text style={styles.loadingText}>Fetching exchange rate…</Text>
+          </View>
+        )}
+        
+        {exchangeRate !== null && convertedAmount !== null && (
+          <View style={styles.resultBox}>
+            <Text style={styles.resultText}>
+              {amount} {baseCurrency.toUpperCase()} ={" "}
+              {convertedAmount.toFixed(2)} {destCurrency.toUpperCase()}
+            </Text>
+            <Text style={styles.rateText}>
+              Exchange rate used: 1 {baseCurrency.toUpperCase()} ={" "}
+              {exchangeRate} {destCurrency.toUpperCase()}
+            </Text>
           </View>
         )}
