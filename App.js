@@ -126,3 +126,21 @@ const MainScreen = ({ navigation }) => {
       setLoading(false);
     }
   };
+   
+  return (
+   
+    <KeyboardAvoidingView
+      style={{ flex: 1 }}
+      behavior={Platform.OS === "ios" ? "padding" : undefined}
+    >
+      <ScrollView contentContainerStyle={styles.container}>
+        <Text style={styles.title}>Currency Converter</Text>
+
+        <LabeledInput
+          label="Base Currency Code"
+          value={baseCurrency}
+          onChangeText={setBaseCurrency}
+          placeholder="CAD"
+          placeholderTextColor="#9CA3AF"
+
+        />
