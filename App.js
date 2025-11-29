@@ -88,3 +88,24 @@ const MainScreen = ({ navigation }) => {
 
     try {
       const url = `https://api.freecurrencyapi.com/v1/latest?apikey=${API_KEY}&base_currency=${base}&currencies=${dest}`;
+
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        // Network/HTTP error (e.g. invalid key, 4xx/5xx)
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      const json = await response.json();
+
+      if (!json || !json.data) {
+        throw new Error("Invalid response from the currency API.");
+      }
+
+      const rate = json.data[dest];
+
+      if (!rate) {
+        throw new Error(
+          `The currency "${dest}" was not found in the API response.`
+        );
+      }
