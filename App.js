@@ -330,3 +330,15 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 3,
   },
+
+  resultText: {
+    fontSize: 20,
+    fontWeight: "700",
+    marginBottom: 10,
+    color: "#1F2937",
+  },
+
+  rateText: {
+    fontSize: 15,
+    color: "#4B5563",
+  },
