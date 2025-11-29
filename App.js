@@ -342,3 +342,23 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "#4B5563",
   },
+
+  // "Go to About Screen" link
+  aboutLink: {
+    marginTop: 35,
+    alignItems: "center",
+  },
+
+  aboutLinkText: {
+    color: "#0EA5E9",
+    fontSize: 17,
+    fontWeight: "600",
+  },
+
+  // About screen text
+  aboutText: {
+    fontSize: 17,
+    marginBottom: 10,
+    color: "#1F2937",
+  },
+});
