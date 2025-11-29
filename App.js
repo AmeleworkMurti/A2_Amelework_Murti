@@ -200,3 +200,25 @@ const MainScreen = ({ navigation }) => {
     </KeyboardAvoidingView>
   );
 };
+
+
+// AboutScreen: name, ID, short description
+const AboutScreen = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>About This App</Text>
+
+      
+      <Text style={styles.aboutText}>Name: Amelework Murti</Text>
+      <Text style={styles.aboutText}>ID: 101378582</Text>
+
+      <Text style={[styles.aboutText, { marginTop: 16 }]}>
+           This application converts an amount from a base currency into a
+        destination currency using live exchange rates from freecurrencyapi.com.
+        The user enters the base currency code, destination currency code, and
+        amount, and the app fetches the latest rate and shows the converted
+        value.
+      </Text>
+    </View>
+  );
+};
