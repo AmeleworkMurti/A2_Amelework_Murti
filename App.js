@@ -284,3 +284,30 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     fontSize: 15,
     color: "grey",
+
+    // makes styling consistent in Snack Web
+    outlineStyle: "none",
+    appearance: "none",
+
+    // subtle shadow
+    shadowColor: "#000",
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+
+  // Convert button wrapper
+  buttonWrapper: {
+    marginTop: 22,
+  },
+
+  loadingWrapper: {
+    marginTop: 20,
+    alignItems: "center",
+  },
+
+  loadingText: {
+    marginTop: 10,
+
+    color: "#4B5563",
+  },
