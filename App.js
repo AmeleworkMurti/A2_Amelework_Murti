@@ -170,3 +170,10 @@ const MainScreen = ({ navigation }) => {
             disabled={loading} //Disable button while loading
           />
         </View>
+        
+        {loading && (
+          <View style={styles.loadingWrapper}>
+            <ActivityIndicator size="large" />
+            <Text style={styles.loadingText}>Fetching exchange rate…</Text>
+          </View>
+        )}
