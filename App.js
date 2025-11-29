@@ -261,3 +261,26 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#1A1D1F",
   },
+// Input wrapper
+  inputGroup: {
+    marginBottom: 18,
+  },
+
+  label: {
+    fontSize: 15,
+    marginBottom: 6,
+    fontWeight: "600",
+    color: "#374151",
+    
+  },
+
+  // Text input box
+  input: {
+    borderWidth: 1,
+    borderColor: "#D1D5DB",
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    backgroundColor: "white",
+    fontSize: 15,
+    color: "grey",
