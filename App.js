@@ -311,3 +311,22 @@ const styles = StyleSheet.create({
 
     color: "#4B5563",
   },
+  // Error message
+  errorText: {
+    color: "#DC2626",
+    marginTop: 8,
+    fontWeight: "500",
+  },
+
+  // Result section
+  resultBox: {
+    marginTop: 30,
+    padding: 20,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 12,
+
+    shadowColor: "#000",
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    elevation: 3,
+  },
