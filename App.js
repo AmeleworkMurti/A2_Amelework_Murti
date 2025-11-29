@@ -241,3 +241,23 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+// Simple styling
+const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    padding: 22,
+    paddingTop: 50,
+    backgroundColor: "soft_grey", 
+   
+
+  },
+
+  // Title styling
+  title: {
+    fontSize: 28,
+    fontWeight: "700",
+    marginBottom: 25,
+    textAlign: "center",
+    color: "#1A1D1F",
+  },
