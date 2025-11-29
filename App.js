@@ -68,3 +68,23 @@ const MainScreen = ({ navigation }) => {
 
     return null;
   };
+
+  const handleConvert = async () => {
+    setError("");
+    setExchangeRate(null);
+    setConvertedAmount(null);
+
+    const validationError = validateInputs();
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+
+    const base = baseCurrency.trim().toUpperCase();
+    const dest = destCurrency.trim().toUpperCase();
+    const numericAmount = Number(amount);
+
+    setLoading(true);
+
+    try {
+      const url = `https://api.freecurrencyapi.com/v1/latest?apikey=${API_KEY}&base_currency=${base}&currencies=${dest}`;
