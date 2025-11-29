@@ -222,3 +222,22 @@ const AboutScreen = () => {
     </View>
   );
 };
+// Root App with Stack Navigation
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Main"
+          component={MainScreen}
+          options={{ title: "Currency Converter" }}
+        />
+        <Stack.Screen
+          name="About"
+          component={AboutScreen}
+          options={{ title: "About" }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
