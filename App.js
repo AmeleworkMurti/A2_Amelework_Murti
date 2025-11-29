@@ -161,3 +161,12 @@ const MainScreen = ({ navigation }) => {
 
           keyboardType="numeric"
         />
+        {error ? <Text style={styles.errorText}>{error}</Text> : null}
+
+        <View style={styles.buttonWrapper}>
+          <Button
+            title={loading ? "Converting..." : "Convert"}
+            onPress={handleConvert}
+            disabled={loading} //Disable button while loading
+          />
+        </View>
