@@ -152,3 +152,12 @@ const MainScreen = ({ navigation }) => {
           placeholderTextColor="#9CA3AF"
 
         />
+        <LabeledInput
+          label="Amount"
+          value={amount}
+          onChangeText={setAmount}
+          placeholder="1"
+          placeholderTextColor="#9CA3AF"
+
+          keyboardType="numeric"
+        />
