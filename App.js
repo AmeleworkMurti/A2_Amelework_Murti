@@ -177,7 +177,7 @@ const MainScreen = ({ navigation }) => {
             <Text style={styles.loadingText}>Fetching exchange rate…</Text>
           </View>
         )}
-        
+
         {exchangeRate !== null && convertedAmount !== null && (
           <View style={styles.resultBox}>
             <Text style={styles.resultText}>
@@ -190,3 +190,13 @@ const MainScreen = ({ navigation }) => {
             </Text>
           </View>
         )}
+         <TouchableOpacity
+          style={styles.aboutLink}
+          onPress={() => navigation.navigate("About")}
+        >
+          <Text style={styles.aboutLinkText}>Go to About Screen</Text>
+        </TouchableOpacity>
+      </ScrollView>
+    </KeyboardAvoidingView>
+  );
+};
