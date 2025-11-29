@@ -109,3 +109,20 @@ const MainScreen = ({ navigation }) => {
           `The currency "${dest}" was not found in the API response.`
         );
       }
+      const converted = numericAmount * rate;
+
+      setExchangeRate(rate);
+      setConvertedAmount(converted);
+    } catch (err) {
+      // error messages
+      if (err.message.includes("status 401") || err.message.includes("403")) {
+        setError("Invalid or missing API key. Please check your API key.");
+      } else if (err.message.startsWith("Request failed with status")) {
+        setError("Error from API: " + err.message);
+      } else {
+        setError("Network or API error: " + err.message);
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
