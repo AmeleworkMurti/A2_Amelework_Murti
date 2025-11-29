@@ -144,3 +144,11 @@ const MainScreen = ({ navigation }) => {
           placeholderTextColor="#9CA3AF"
 
         />
+        <LabeledInput
+          label="Destination Currency Code"
+          value={destCurrency}
+          onChangeText={setDestCurrency}
+          placeholder="USD"
+          placeholderTextColor="#9CA3AF"
+
+        />
