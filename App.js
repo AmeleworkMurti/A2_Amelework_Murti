@@ -39,3 +39,32 @@ const LabeledInput = ({
     />
   </View>
 );
+
+//MainScreen: main functionality
+const MainScreen = ({ navigation }) => {
+  const [baseCurrency, setBaseCurrency] = useState("CAD");
+  const [destCurrency, setDestCurrency] = useState("");
+  const [amount, setAmount] = useState("1");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [exchangeRate, setExchangeRate] = useState(null);
+  const [convertedAmount, setConvertedAmount] = useState(null);
+
+  const validateInputs = () => {
+    const currencyRegex = /^[A-Z]{3}$/;
+
+    if (!currencyRegex.test(baseCurrency.trim())) {
+      return "Base currency must be a 3-letter UPPERCASE code (e.g. CAD).";
+    }
+
+    if (!currencyRegex.test(destCurrency.trim())) {
+      return "Destination currency must be a 3-letter UPPERCASE code (e.g. USD).";
+    }
+
+    const numericAmount = Number(amount);
+    if (isNaN(numericAmount) || numericAmount <= 0) {
+      return "Amount must be a positive number.";
+    }
+
+    return null;
+  };
